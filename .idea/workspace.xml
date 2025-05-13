@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7818efb9-3572-494d-bbf8-046378acebed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/testAPI/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/patterns/interfaces/IRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/patterns/interfaces/IResponse.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/patterns/types/httpStatusCode.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/axiosInstance.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/patterns/interfaces/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/fetcher.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/testAPI/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/testAPI/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/patterns/interfaces/IRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useFetcher/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/patterns/interfaces/IResponse.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/patterns/types/httpStatusCode.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/patterns/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/axiosInstance.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/serverAxiosInstance.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +103,8 @@
       <workItem from="1747028747314" duration="106000" />
       <workItem from="1747028872277" duration="9059000" />
       <workItem from="1747080487787" duration="2696000" />
-      <workItem from="1747083299600" duration="973000" />
+      <workItem from="1747083299600" duration="7097000" />
+      <workItem from="1747107950444" duration="13246000" />
     </task>
     <servers />
   </component>

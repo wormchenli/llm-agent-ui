@@ -1,13 +1,13 @@
-import { getRequest } from "@/utils/axiosInstance";
+import { getRequest } from "@/utils/serverAxiosInstance";
 import { NextResponse } from "next/server";
-import { BASEURL } from "@/config";
 
 export const GET = async () => {
+  console.log("GET triggered=====>");
   try {
-    console.log(`${BASEURL}/ping`);
-
-    const _data = await getRequest(`${BASEURL}/ping`, null);
-    console.log(`${BASEURL}/ping`);
+    const _data = await getRequest(`/ping`, {
+      name: "lichen",
+      age: 25,
+    });
     return NextResponse.json(_data);
   } catch (error) {
     console.error("Error fetching data:", error);

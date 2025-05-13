@@ -1,20 +1,18 @@
 "use client";
-
-import { useState } from "react";
-// import { getRequest } from "@/utils/axiosInstance";
+// import { useState } from "react";
+import { useFetcher } from "@/hooks/useFetcher";
 
 export default function Home() {
-  const [data, setData] = useState<any>(null);
+  const { responseData, fetchData } = useFetcher();
 
-  const handleClick = async () => {
-    const res = await fetch("/api/testAPI");
-    const json = await res.json();
-    setData(json.data);
+  const handleClick = () => {
+    fetchData("/api/testAPI", "GET");
   };
+
   return (
     <>
       <button onClick={handleClick}>Click</button>
-      <p>{data}</p>
+      {responseData?.data && <p>{responseData.data?.respond}</p>}
     </>
   );
 }

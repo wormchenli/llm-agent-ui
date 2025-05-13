@@ -1,13 +1,9 @@
 import { BASEURL, REQUEST_TIMEOUT } from "@/config";
+import { IRequestOptions } from "@/patterns/interfaces";
 
 import axios from "axios";
 
-interface IRequestOptions {
-  params?: Record<string, any> | null;
-  body?: Record<string, any> | null;
-}
-
-const axiosInstance = axios.create({
+const serverAxiosInstance = axios.create({
   baseURL: BASEURL,
   timeout: REQUEST_TIMEOUT,
   withCredentials: true,
@@ -17,9 +13,13 @@ const axiosInstance = axios.create({
   },
 });
 
-export function getRequest(url: string, params: Record<string, any> | null) {
-  return axiosInstance
-    .get(url, { params })
+export async function getRequest(
+  url: string,
+  params: IRequestOptions["params"] = null,
+) {
+  const serverURL = `${BASEURL}${url}`;
+  return await serverAxiosInstance
+    .get(serverURL, { params })
     .then((response) => {
       return response.data;
     })
