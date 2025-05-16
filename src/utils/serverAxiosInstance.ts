@@ -4,7 +4,6 @@ import { IRequestOptions } from "@/patterns/interfaces";
 import axios from "axios";
 
 const serverAxiosInstance = axios.create({
-  baseURL: BASEURL,
   timeout: REQUEST_TIMEOUT,
   withCredentials: true,
   headers: {
@@ -25,6 +24,19 @@ export async function getRequest(
     })
     .catch((error) => {
       console.error("GET request error:", error);
+      throw error;
+    });
+}
+
+export async function postRequest(url: string, body: object) {
+  const serverURL = `${BASEURL}${url}`;
+  return await serverAxiosInstance
+    .post(serverURL, body)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.error("POST request error:", error);
       throw error;
     });
 }
