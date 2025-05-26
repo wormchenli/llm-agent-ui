@@ -8,7 +8,6 @@ export function useFetcher() {
 
   const baseOptions: RequestInit = {
     method: "GET",
-    mode: "cors",
     credentials: "include",
     headers: {
       "Content-Type": "application/json",
